@@ -2,33 +2,33 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-  }
+}
   
-  body {
-      background-color: #ffffff; 
-      margin: 0;
-  }
+body {
+    background-color: #ffffff; 
+    margin: 0;
+}
   
-  /* --- NAV BAR --- */
-  nav {
-      width: 100%;
-      position: relative;
-      top: 0;
-      left: 0;
+/* --- NAV BAR --- */
+nav {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
       
-      z-index: 99;
-  }
+    z-index: 99;
+}
   
-  .nav_content {
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 2px;
-      max-width: var(--max-width);
-      margin: auto;
-      padding: 1.5rem 1rem;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-  }
+.nav_content {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
   
   ul {
       display: flex;
@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100vh;
+    height: 90vh;
   }
 
   .logo {
@@ -134,17 +134,85 @@
     right: 0;
     max-height: 100%;
     width: auto;
-  }
- /* --- SPONSORS ---*/
- #sponsor {
-    display: flex;
+    transform: scaleX(-1);
     overflow: hidden;
+  }
+  .img-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(-1);
+    width: auto; 
+    height: 80%; 
+    overflow: hidden;
+    margin-right: -110px;
+  }
+
+  .image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+/* --- SCHEDULE --- */
+.schedule {
+    background-color: #00B89D;
+    height: 90vh;
+}
+.container2 {
+    display: flex;
+    align-items: center;
+}
+.scheduletext {
+    color: rgba(0, 0, 0, 0.10);
+    font-size: 320px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+    width: 200%;
 }
 
-.sponsor img {
-    width: 150px; /* Adjust the width as needed */
-    height: auto;
-    margin-right: 20px; /* Adjust the spacing between logos as needed */
+/* --- SPONSORS ---*/
+#sponsor {
+    display: flex;
+    overflow: hidden;
+    white-space: initial;
+}
+
+.logod {
+    height: 110px;
+    margin-right: 20px;
+}
+
+.logo1 {
+    width: 250px;
+}
+
+.logo2 {
+    width: 284px;
+}
+
+.logo3 {
+    width: 500px;
+}
+
+.logo4 {
+    width: 500px;
+}
+
+.logo5 {
+    width: 425px;
+}
+
+.logo6 {
+    width: 250px;
+}
+
+.logo7 {
+    width: 425px;
 }
 
 @keyframes scroll {
