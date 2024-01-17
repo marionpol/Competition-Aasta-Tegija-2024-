@@ -11,7 +11,7 @@
   /* --- NAV BAR --- */
   nav {
       width: 100%;
-      position: fixed;
+      position: relative;
       top: 0;
       left: 0;
       background-color: #ffffff;
@@ -61,7 +61,35 @@
       height: 80vh;
       font-family: 'Montserrat', sans-serif;
   }
+  /* --- HOME ---*/
+  .home {
+    display: flex;
+    height: 80vh;
+  }
+  .logo {
+    position: relative;
+    top: 5px;
+    left: 20px;
+  }
+
+ /* --- SPONSORS ---*/
+  .sponsor {
+    display: flex;
+    overflow: hidden;
+  }
   
+  .sponsor img {
+    width: 250px;
+    height: 100px;
+    margin-right: 20px; 
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .sponsor img .logo1 {
+
+  }
+  
+  /* --- FOOTER --- */
   .footer .footer-contact {
   
       font-size: 20px;
