@@ -32,3 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
         logosContainer.innerHTML += originalLogos;
     }
 });
+
+
+
+
+// Nav bar background fade in and out
+document.addEventListener("DOMContentLoaded", function () {
+    var nav = document.getElementById("navigation");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 100) {
+        nav.classList.add("nav-scroll");
+      } else {
+        nav.classList.remove("nav-scroll");
+      }
+    });
+  });

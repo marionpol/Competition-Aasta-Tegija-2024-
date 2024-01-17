@@ -11,179 +11,235 @@ body {
   
 /* --- NAV BAR --- */
 nav {
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-      
-    z-index: 99;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
 }
-  
+
 .nav_content {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 1.5rem 1rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+ul {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li {
+    position: relative;
+}
+
+ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.nav-scroll {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
   
-  ul {
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
-      gap: 1rem;
-      list-style: none;
-      transition: left 0.3s;
-  }
-  
-  ul li {
-      position: relative;
-  }
-  
-  ul li a {
-      padding: 0.5rem 1rem;
-      border: 2px solid transparent;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 400;
-      color: #000000;
-      transition: 0.3s;
-  }
-  
  
-  /* --- HOME ---*/
-  .home {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 90vh;
-  }
+ /* --- HOME ---*/
+ .home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 80vh;
+}
 
-  .logo {
-    position: relative;
-    top: -60px;
-    left: 20px;
-  }
+.logo {
+  position: relative;
+  margin-top: 10px;
+  left: 20px;
+}
 
-  .logo img {
-    width: 222px
-  }
+.logo img {
+  width: 222px
+}
 
-  .container {
-    margin-left: 150px;
-    text-align: left;
-  }
-  
-  .datetext {
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  .greencl {
-    color: #00B89D;
-  }
-  .bgtext {
-    font-size: 72px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  .undertext {
-    font-size: 30px;
-    font-style: italic;
-    font-weight: 300;
-    line-height: normal;
-    margin-bottom: 20px
-  }
-  .maintext {
-    color: #000;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 45px;
-    max-width: 80rem;
-  }
-  .maintext2 {
-    margin-top: 2rem;
-    color: #000;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 45px;
-    max-width: 80rem;
-  }
-  .darkfont {
-    font-weight: 700;
-  }
+.container {
+  margin-left: 120px;
+  text-align: left;
+  max-width: 65%;
+}
 
-  .main-img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    max-height: 100%;
-    width: auto;
-    transform: scaleX(-1);
-    overflow: hidden;
-  }
-  .img-container {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: scaleX(-1);
-    width: auto; 
-    height: 80%; 
-    overflow: hidden;
-    margin-right: -110px;
-  }
+.datetext {
+  margin-top: 100px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
-  .image-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+.greencl {
+  color: #00B89D;
+}
+.bgtext {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.undertext {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 20px
+}
+.maintext {
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 80rem;
+}
+.maintext2 {
+  margin-top: 2rem;
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 80rem;
+}
+.darkfont {
+  font-weight: 700;
+}
+.img-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(-1);
+  width: auto; 
+  height: 85%; 
+  overflow: hidden;
+  z-index: -1;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* --- SCHEDULE --- */
 .schedule {
-    position: relative;
-    background-color: #00B89D;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  background-color: #00B89D;
+  height: 75vh;
+  overflow: hidden;
 }
 .container2 {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    justify-content: center;
-    position: absolute;
+position: absolute;
+display: flex;
+max-width: 100%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 .scheduletext {
-    color: rgba(0, 0, 0, 0.10);
-    font-size: 320px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    overflow: hidden;
-    white-space: nowrap;
-    text-align: center;
-    width: 200%;
+  color: rgba(0, 0, 0, 0.10);
+  font-size: 200px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  width: 200%;
 }
-
 .spicture1 {
-    position: absolute; 
-    height: 100%; 
-    width: 100%;
+  position: absolute; 
+  height: 100%; 
+  width: 100%;
+}
+.spicture2 {
+position: absolute; 
+height: 100%; 
+width: 100%;
+left: 5%;
 }
 
+.spicture3 img {
+position: absolute;
+overflow: hidden;
+display: block;
+height: auto;
+bottom: 0;
+left: 0;
+width: auto;
+height: 80%;
+}
+
+.bottom-right {
+position: absolute; 
+bottom: 0; 
+right: 0; 
+max-width: 100%;
+max-height: 100%;
+}
 .bottom-left {
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    max-width: 100%;
-    max-height: 100%;
+position: absolute; 
+bottom: 0; 
+left: 0; 
+max-width: 100%;
+max-height: 100%;
+}
+
+#days {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -300%);
+text-align: center;
+width: 100%;
+display: flex;
+justify-content: center;
+}
+
+#days button {
+margin: 25px;
+background-color: #00B89D;
+border: 1px ;
+font-size: 20px;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+cursor: pointer;
+}
+
+
+.text-blocks {
+display: none;
+text-align: center;
+}
+
+.text-blocks.active {
+display: block;
 }
 
 
