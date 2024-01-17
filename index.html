@@ -17,12 +17,12 @@
                 <li><a href="#home">Baltic Games</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#sponsor">Sponsors</a></li>
             </ul>
         </div>
     </nav>
     <!-- HOME -->
-    <section class="home">
+    <section class="home" id="home">
         <div class="logo">
             <img src="logod/MainLogo.png" alt="mainlogo" class="logo0">
         </div>
@@ -39,7 +39,7 @@
         </div>
     </section>
     <!-- SCHEDULE -->
-    <section class="schedule">
+    <section class="schedule" id="schedule">
         <div class="container2">
             <h1 class="scheduletext">Schedule</h1>
         </div>
@@ -48,8 +48,32 @@
         </div>
     </section>
     <!-- ABOUT -->
-    <section class="about">
-        
+    <section class="about" id="about">
+        <div class="about-div">
+            <h1>About</h1>
+        </div>
+        <div class="about-menu">
+            <button class="arrow-btn" onclick="changeIcon(this, 'paragraph1')"  data-paragraph="paragraph1">Our Mission <i class="fa-solid fa-arrow-left"></i></button></br>
+            <button class="arrow-btn" onclick="changeIcon(this, 'paragraph2')"  data-paragraph="paragraph2">Winners <i class="fa-solid fa-arrow-left"></i></button></br>
+            <button class="arrow-btn" onclick="changeIcon(this, 'paragraph3')"  data-paragraph="paragraph3">History <i class="fa-solid fa-arrow-left"></i></button>
+
+        </div>
+        <div id="paragraph1" class="about-content active">
+            <p>The Baltic States - Estonian, Latvian and Lithuanian - sports games in vocational
+            education aim is to promote the growth of athletic results as well as to strengthen the
+            friendship between the young people, educators, educational institutions and the management.</p>
+            <p>Instructions for Baltic Games 2024-2027 can be found <button class="btn-here">HERE</button>.</p>
+          </div>
+          <div id="paragraph2" class="about-content">
+            <p>XX Tartu 17-19.05.2012</br>XXI Panevežnis 23-25.05.2013</br>XXII Smiltene 8-10.05.2014</br>XXIII Viljandi 23-25.05.2015</br>XXIV Kedainai 26-28.04.2016 XXV</br>Jelgava 27-29.04.2017 XXVI</br> Pärnu 26-28.04.2018 XXVII</br>Kaunas 9-11.05.2019 XXVIII</br>Ogre 27-29.04.2023</p>
+          </div>
+          <div id="paragraph3" class="about-content">
+            <p class="p-history">"For some time I (I.Bukovska) had an idea about the necessity of Sports Games for students and teachers involved voactional education in the Baltic States. After getting acquainted with the representative of Estonian vocational education - a very athletic gentleman - I thought to myself: "Now is the right time to start the negotiations". The choice was right, the support was recieved immediately. "If Tallin does not involve after a few months (the games were in autumn of the same year) then there are three educational institutions in Tartu and Estonia will have a team", summarizes Mr Sokman."</p>
+            <p>Read more<button class="btn-here">HERE</button>.</p>
+            </div>  
+        <div class="about-pic">
+            <img src="logod/Layer 7.png" alt="img-center">
+        </div>
     </section>
     <!-- SPONSOR -->
     <section class="sponsorid">

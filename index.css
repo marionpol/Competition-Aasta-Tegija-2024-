@@ -53,15 +53,7 @@ nav {
       transition: 0.3s;
   }
   
-  .footer {
-      background-color: #000000;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 80vh;
-      font-family: 'Montserrat', sans-serif;
-  }
+ 
   /* --- HOME ---*/
   .home {
     display: flex;
@@ -194,6 +186,71 @@ nav {
     max-height: 100%;
 }
 
+
+/* --- ABOUT ---*/
+.about {
+  background-color: #EF4044;
+}
+.about-div h1{
+  font-size: 200px;
+  position: relative;
+  color: rgba(0, 0, 0, 0.20);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.about-menu{
+  position: absolute;
+  line-height: 50px;
+  padding-top:20px;
+  padding-left:15% ;
+
+}
+.about-menu .arrow-btn{
+  font-size: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.about-content {
+  padding-right: 10px;
+  position: relative;
+  margin-left: 50%;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 50%;
+  font-size: 20px;
+  overflow: hidden;
+  display: none;
+}
+.about-content p {
+  margin-bottom: 20px;
+}
+.about-content.active {
+  display: flex; 
+}
+
+.about-content .btn-here{
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.about-pic {
+  position: relative;
+  display: flex;
+  transform: scaleX(-1);
+  width: auto;
+  height: 300px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
 /* --- SPONSORS ---*/
 #sponsor {
   overflow: hidden;
@@ -255,6 +312,17 @@ nav {
   }
 }
   /* --- FOOTER --- */
+
+  .footer {
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
   .footer .footer-contact {
       font-size: 20px;
       padding-left: 100px;
