@@ -1,5 +1,16 @@
+function showSchedule(day) {
+    var textBlocks = document.querySelectorAll('.text-blocks');
+    textBlocks.forEach(function(block) {
+      block.classList.remove('active');
+    });
+
+    var selectedBlock = document.getElementById(day);
+    if (selectedBlock) {
+      selectedBlock.classList.add('active');
+    }
+  }
+
 function changeIcon(button, paragraphId) {
-    // Reset all arrows to the left position
     var allButtons = document.querySelectorAll('.arrow-btn');
     allButtons.forEach(function (btn) {
         var icon = btn.querySelector('i');
@@ -7,12 +18,10 @@ function changeIcon(button, paragraphId) {
         icon.classList.add('fa-arrow-left');
     });
 
-    // Toggle the arrow for the clicked button
     var icon = button.querySelector('i');
     icon.classList.toggle('fa-arrow-left');
     icon.classList.toggle('fa-arrow-down');
 
-    // Toggle the visibility of paragraphs based on the clicked button
     var paragraphs = document.querySelectorAll('.about-content');
     paragraphs.forEach(function (paragraph) {
         paragraph.classList.remove('active');
@@ -22,6 +31,7 @@ function changeIcon(button, paragraphId) {
     var activeParagraph = document.getElementById(activeParagraphId);
     activeParagraph.classList.add('active');
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     const logosContainer = document.getElementById("logod-container");
     const originalLogos = logosContainer.innerHTML; 
@@ -32,9 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
         logosContainer.innerHTML += originalLogos;
     }
 });
-
-
-
 
 // Nav bar background fade in and out
 document.addEventListener("DOMContentLoaded", function () {

@@ -151,6 +151,7 @@ ul li a {
   background-color: #00B89D;
   height: 75vh;
   overflow: hidden;
+  z-index: 1;
 }
 .container2 {
 position: absolute;
@@ -171,6 +172,7 @@ text-overflow: ellipsis;
   text-align: center;
   width: 200%;
 }
+
 .spicture1 {
   position: absolute; 
   height: 100%; 
@@ -211,35 +213,47 @@ max-height: 100%;
 
 #days {
 position: absolute;
-top: 50%;
+top: 35%;
 left: 50%;
-transform: translate(-50%, -300%);
+transform: translate(-50%, -50%);
 text-align: center;
 width: 100%;
 display: flex;
+flex-direction: row;
 justify-content: center;
+z-index: 2;
 }
 
 #days button {
-margin: 25px;
+margin: 20px;
 background-color: #00B89D;
-border: 1px ;
+border: 1px;
 font-size: 20px;
 font-size: 24px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
 cursor: pointer;
+z-index: 2;
 }
 
 
 .text-blocks {
-display: none;
-text-align: center;
+  display: none;
+      text-align: center;
+      position: absolute;
+      top: 69%; 
+      left: 52%;
+      transform: translate(-50%, -50%);
+      z-index: 1; 
+    }
+.text-blocks p {
+  padding-bottom: 10px;
+
 }
 
 .text-blocks.active {
-display: block;
+  display: block;
 }
 
 
