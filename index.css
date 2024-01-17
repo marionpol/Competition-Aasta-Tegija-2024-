@@ -199,9 +199,14 @@ nav {
   overflow: hidden;
 }
 
-.logos-container {
+.sponsorid {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logod-div {
   display: flex;
-  transition: transform 2s linear; /* Adjust the duration as needed */
+  animation: scroll 60s linear infinite;
 }
 
 .logod {
@@ -209,47 +214,46 @@ nav {
   margin-right: 30px;
 }
 
-
 .logo1 {
-    width: 300px;
+  width: 300px;
 }
 
 .logo2 {
-    width: 284px;
+  width: 284px;
 }
 
 .logo3 {
-    width: 300px;
-    margin-right: 5px;
+  width: 300px;
+  margin-right: 5px;
 }
 
 .logo4 {
-    width: 150px;
+  width: 150px;
 }
 
 .logo5 {
-    width: 325px;
+  width: 325px;
 }
 
 .logo6 {
-    width: 250px;
+  width: 250px;
 }
 
 .logo7 {
-    padding-top: 40px;
-    width: 300px;
-    height: 30px;
+  padding-top: 40px;
+  width: 300px;
+  height: 30px;
+  margin-right: 0;
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
 }
-
   /* --- FOOTER --- */
   .footer .footer-contact {
       font-size: 20px;
