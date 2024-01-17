@@ -1,35 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var sponsorSection = document.getElementById('sponsor');
-    var logos = document.querySelectorAll('.logod');
-
-    function calculateTotalWidth() {
-        return Array.from(logos).reduce((acc, logo) => acc + logo.offsetWidth + parseInt(getComputedStyle(logo).marginRight || 0), 0);
-    }
-
-    function updateSponsorWidth() {
-        var totalWidth = calculateTotalWidth();
-        sponsorSection.style.width = totalWidth * 2 + 'px'; // Double the width to create a continuous loop
-    }
+    var logosContainer = document.querySelector('.logos-container');
 
     function startAnimation() {
-        sponsorSection.style.transition = 'none';
-        sponsorSection.style.transform = 'translateX(0)';
-
-        var animationDuration = calculateTotalWidth() / 100 + 's';
-
-        setTimeout(function () {
-            sponsorSection.style.transition = 'transform ' + animationDuration + ' linear';
-            sponsorSection.style.transform = 'translateX(-' + calculateTotalWidth() + 'px)';
-        }, 0);
+        // Move the logos to the left
+        logosContainer.style.transform = 'translateX(-100%)';
     }
 
-    updateSponsorWidth();
     startAnimation();
 
-    sponsorSection.addEventListener('transitionend', function () {
-        sponsorSection.style.transition = 'none';
-        sponsorSection.style.transform = 'translateX(0)';
-        updateSponsorWidth();
-        setTimeout(startAnimation, 0);
+    logosContainer.addEventListener('transitionend', function () {
+        // Move the logos instantly to the starting position without noticeable jump
+        logosContainer.style.transition = 'none';
+        logosContainer.style.transform = 'translateX(0)';
+        void logosContainer.offsetWidth; // Trigger reflow
+        setTimeout(function () {
+            // Restart the animation
+            logosContainer.style.transition = 'transform 2s linear'; // Adjust the duration as needed
+            startAnimation();
+        }, 0);
     });
 });

@@ -196,17 +196,22 @@ nav {
 
 /* --- SPONSORS ---*/
 #sponsor {
-    display: flex;
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.logos-container {
+  display: flex;
+  transition: transform 2s linear; /* Adjust the duration as needed */
 }
 
 .logod {
-    height: 110px;
-    margin-right: 30px;
+  height: 110px;
+  margin-right: 30px;
 }
 
+
 .logo1 {
-    width: 250px;
+    width: 300px;
 }
 
 .logo2 {
@@ -215,6 +220,7 @@ nav {
 
 .logo3 {
     width: 300px;
+    margin-right: 5px;
 }
 
 .logo4 {
@@ -230,8 +236,8 @@ nav {
 }
 
 .logo7 {
-    padding-top: 35px;
-    width: 320px;
+    padding-top: 40px;
+    width: 300px;
     height: 30px;
 }
 
