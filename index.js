@@ -1,23 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const logoContainer = document.querySelector(".sponsor");
-    let position = 0;
-  
-    function moveLogos() {
-      position -= 5; // Adjust the speed as needed
-      logoContainer.style.transform = `translateX(${position}px)`;
-  
-      // Repeat the animation
-      if (position <= -100 * 7) {
-        position = 0;
-        logoContainer.style.transition = "none";
-        logoContainer.style.transform = `translateX(${position}px)`;
-        setTimeout(() => {
-          logoContainer.style.transition = "transform 0.5s ease-in-out";
+document.addEventListener("DOMContentLoaded", function() {
+    var sponsorSection = document.getElementById('sponsor');
+    var logos = document.querySelectorAll('.logo');
+    var logosWidth = logos[0].offsetWidth + parseInt(getComputedStyle(logos[0]).marginRight);
+    var logosCount = logos.length;
+
+    sponsorSection.style.width = (logosCount * logosWidth) + 'px';
+
+    function startAnimation() {
+        sponsorSection.style.transition = 'none';
+        sponsorSection.style.transform = 'translateX(0)';
+
+        setTimeout(function() {
+            sponsorSection.style.transition = 'transform 10s linear';
+            sponsorSection.style.transform = 'translateX(-' + logosWidth + 'px)';
         }, 0);
-      }
-  
-      requestAnimationFrame(moveLogos);
     }
-  
-    moveLogos();
-  });
+
+    startAnimation();
+
+    sponsorSection.addEventListener('transitionend', function() {
+        sponsorSection.style.transition = 'none';
+        sponsorSection.style.transform = 'translateX(0)';
+        setTimeout(startAnimation, 0);
+    });
+});
