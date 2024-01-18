@@ -65,7 +65,7 @@ ul li a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 80vh;
+  height: 90vh;
 }
 
 .logo {
@@ -240,10 +240,10 @@ z-index: 2;
 
 .text-blocks {
   display: none;
-      text-align: center;
+      text-align: left;
       position: absolute;
-      top: 69%; 
-      left: 52%;
+      top: 60%; 
+      left:52%;
       transform: translate(-50%, -50%);
       z-index: 1; 
     }
@@ -259,8 +259,11 @@ z-index: 2;
 
 /* --- ABOUT ---*/
 .about {
-  background-color: #EF4044;
+  background: linear-gradient(to right, #EF4044 50%, #FFFFFF 50%);
+  height: 75vh;
+  position: relative;
 }
+
 .about-div h1{
   font-size: 200px;
   position: relative;
@@ -286,9 +289,10 @@ z-index: 2;
   padding-right: 10px;
   position: relative;
   margin-left: 50%;
+  transform: translateX(20%);
   flex-direction: column;
-  justify-content: flex-end;
-  max-width: 50%;
+  justify-content: center;
+  max-width: 40%;
   font-size: 20px;
   overflow: hidden;
   display: none;
@@ -310,13 +314,21 @@ z-index: 2;
 }
 
 .about-pic {
-  position: relative;
-  display: flex;
-  transform: scaleX(-1);
-  width: auto;
-  height: 300px;
-  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-50%);
+  transform: translate(180%);
+  max-width: 20%;  
+  max-height: 80%;
   overflow: hidden;
+}
+
+.about-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transform: scaleX(-1);
 }
 
 
@@ -410,3 +422,45 @@ z-index: 2;
       justify-content: center;
       padding-top: 113px;
   }
+
+
+
+/* --- MOBILE VIEW --- */
+
+html, body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 3000px) {
+  
+}
+
+@media (max-width: 1440px) {
+  
+}
+
+@media (max-width: 1280px) {
+  
+}
+
+@media (max-width: 1240px) {
+  
+}
+
+@media (max-width: 1024px) {
+  
+}
+
+@media (max-width: 800px) {
+  
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  
+}
+

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   logosContainer.style.backgroundColor = "white";
 
-  logosContainer.style.minHeight = "100vh";
+  logosContainer.style.minHeight = "10vh";
 
   logosContainer.style.animation = "scroll 60s linear infinite";
 
