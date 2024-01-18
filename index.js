@@ -23,7 +23,6 @@ function showSchedule(day) {
     }
   }
   else {
-    // If the selected day doesn't exist, hide the scroll bar
     textBlocks.forEach(function (block) {
       block.classList.remove('enable-scroll');
     });
