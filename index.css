@@ -8,7 +8,31 @@ body {
     background-color: #ffffff; 
     margin: 0;
 }
-  
+
+html {
+  scroll-behavior: smooth;
+}
+
+section#home {
+  scroll-margin-top: 100px;
+}
+
+section#schedule {
+  scroll-margin-top: 80px; 
+}
+
+section#about {
+  scroll-margin-top: 10px; 
+}
+
+section#sponsor {
+  scroll-margin-top: 10px; 
+}
+
+.scroll-target {
+  scroll-margin-top: 10px; 
+}
+
 /* --- NAV BAR --- */
 nav {
   width: 100%;
@@ -211,6 +235,7 @@ max-width: 100%;
 max-height: 100%;
 }
 
+
 #days {
 position: absolute;
 top: 35%;
@@ -240,21 +265,35 @@ z-index: 2;
 
 .text-blocks {
   display: none;
-      text-align: left;
-      position: absolute;
-      top: 60%; 
-      left:52%;
-      transform: translate(-50%, -50%);
-      z-index: 1; 
+    text-align: left;
+    position: absolute;
+    top: 60%; 
+    left:52%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    overflow-y: scroll;
+    max-height: 300px;
     }
+
+  #day1 .text-blocks {
+      overflow-y: hidden;
+    }
+
 .text-blocks p {
   padding-bottom: 10px;
 
 }
-
-.text-blocks.active {
-  display: block;
+.text-block.enable-scroll {
+  overflow-y: scroll;
 }
+
+.text-blocks.expand {
+  display: block;
+  overflow-y: scroll;
+}
+
 
 
 /* --- ABOUT ---*/
@@ -432,35 +471,215 @@ html, body {
 }
 
 @media (max-width: 3000px) {
-  
+
 }
 
 @media (max-width: 1440px) {
-  
+
 }
 
 @media (max-width: 1280px) {
-  
-}
-
-@media (max-width: 1240px) {
-  
 }
 
 @media (max-width: 1024px) {
-  
+  .home {
+    height: 100vh;
+  }
 }
 
-@media (max-width: 800px) {
-  
-}
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .home {
+    height: 100vh;
+  }
   nav {
     display: none;
   }
+  .logo {
+    margin-left: auto;
+    margin-right: 2rem;
+    display: block; 
+  }
+  .container {
+    margin-left: 50px;
+    text-align: left;
+    max-width: 70%;
+  }
+  .datetext {
+    margin-top: 1rem;
+  }
+  .bgtext {
+    color: #00B89D;
+  }
+  .maintext {
+    margin-top: 4rem;
+  }
+
+  .img-container {
+    display: none;
+  }
+  /* SCHEDULE MOBILE */
+  .schedule {
+    position: relative;
+    background: linear-gradient(to bottom, #00B89D 50%, #FFFFFF 50%);
+    height: 90vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .container2 {
+    position: absolute;
+    display: flex;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .scheduletext {
+    color: rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 50%; 
+  }
+
+.spicture1 {
+    display: none;
 }
-@media (max-width: 600px) {
-  
+.spicture2 {
+    display: none;
 }
 
+.spicture3 img {
+    display: none;
+}
+
+  #days {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 2;
+  }
+
+  #days button {
+  margin: 20px;
+  background-color: #00B89D;
+  border: 1px;
+  font-size: 20px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  z-index: 2;
+  }
+
+  .text-blocks {
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 75%; 
+    left:52%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
+  }
+/* ABOUT MOBILE */
+  .about {
+    background: white;
+    height: 150vh;
+    position: relative;
+  }
+
+  .about-div h1{
+    display: flex;
+    color: red;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+  }
+
+
+.about-menu {
+  display: none;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 25%;
+}
+  .about-menu .arrow-btn{
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .about-content p {
+    margin-bottom: 20px;
+  }
+  .about-content.active {
+    display: flex; 
+  }
+
+  .about-content .btn-here{
+    background: none;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .about-pic {
+    display: none;
+  }
+
+  .about-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transform: scaleX(-1);
+  }
+}
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  .logo {
+    margin-left: auto;
+    margin-right: 2rem;
+    display: block; 
+  }
+  .home {
+    height: 110vh;
+  }
+
+  .container {
+    margin-left: 50px;
+    text-align: left;
+    max-width: 70%;
+  }
+  .datetext {
+    margin-top: 1rem;
+  }
+  .bgtext {
+    color: #00B89D;
+  }
+  .maintext {
+    margin-top: 4rem;
+  }
+
+  .maintext2 {
+    font-weight: 700;
+  }
+
+  .img-container {
+    display: none;
+  }
+}
